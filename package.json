@@ -1,0 +1,21 @@
+{
+  "name": "piu",
+  "version": "0.0.1",
+  "description": "Infer chord names from a collection of notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "teoria": ">=0.3.0"
+  },
+  "repository": "",
+  "keywords": [
+    "music",
+    "jazz",
+    "chords",
+    "notes"
+  ],
+  "author": "Jakob Miland",
+  "license": "MIT"
+}

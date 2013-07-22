@@ -11,8 +11,9 @@ Require like any other npm module:
 
     var piu = require('piu');
 
-You'll most likely use this library with `teoria` (as all the methods but `piu.name()`
-depends on objects from `teoria`), so let's require that too:
+You'll most likely use this library with [teoria](https://github.com/saebekassebil/teoria)
+(as all the methods but `piu.name()` depends on objects from `teoria`),
+so let's require that too:
 
     var teoria = require('teoria');
 

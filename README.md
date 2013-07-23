@@ -70,4 +70,8 @@ piu.name(
   ])[0]
 );
 // -> C7
+
+// Create an array of TeoriaNotes, and then map each possible chord to its name:
+piu.infer( ['d', 'e', 'g', 'bb'].map(t.note) ).map( piu.name );
+// -> [ 'Gm6', 'Em7b5' ]
 ```

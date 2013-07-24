@@ -11,6 +11,10 @@
     "url": "https://github.com/saebekassebil"
   },
 
+  "scripts": {
+    "test": "vows test/*"
+  },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/saebekassebil/piu"

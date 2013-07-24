@@ -98,5 +98,15 @@ vows.describe('più name inference').addBatch({
     'c, eb, gb, bbb is Cdim7': function() {
       assert.notEqual(names(['c', 'eb', 'gb', 'bbb']).indexOf('Cdim7'), -1);
     }
+  },
+
+  'piu.name() parenthesis insertion': {
+    'd, eb, g, b is G(b6)': function() {
+      assert.notEqual(names(['d', 'eb', 'g', 'b']).indexOf('G(b6)'), -1);
+    },
+
+    'ab, c, eb, fb is Ab(b6)': function() {
+      assert.notEqual(names(['ab', 'c', 'eb', 'fb']).indexOf('Ab(b6)'), -1);
+    }
   }
 }).export(module);

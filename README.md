@@ -60,14 +60,9 @@ piu.name({
 });
 // -> 'Am7'
 
-// Or map results from piu.infer(), to piu.name():
+// Select a result from piu.infer() and hand it along to piu.name()
 piu.name(
-  piu.infer([
-	teoria.note('c'),
-	teoria.note('e'),
-	teoria.note('g'),
-	teoria.note('bb')
-  ])[0]
+  piu.infer(['c', 'e', 'g', 'bb'].map(teoria.note))[0]
 );
 // -> C7
 

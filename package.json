@@ -1,6 +1,6 @@
 {
   "name": "piu",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Infer/Recognize chords from collections of notes",
   "keywords": ["music", "jazz", "chords", "notes", "analytic"],
   "main": "index.js",

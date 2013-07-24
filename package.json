@@ -1,6 +1,6 @@
 {
   "name": "piu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Infer/Recognize chords from collections of notes",
   "keywords": ["music", "jazz", "chords", "notes", "analytic"],
   "main": "index.js",
@@ -23,5 +23,9 @@
 
   "dependencies": {
     "teoria": ">=0.3.3"
+  },
+
+  "devDependencies": {
+    "vows": ">=0.6.0"
   }
 }

@@ -52,5 +52,43 @@ vows.describe('più name inference').addBatch({
     'e, g, b# is Em#5': function() {
       assert.notEqual(names(['e', 'g', 'b#']).indexOf('Em#5'), -1);
     }
+  },
+
+  'piu.name() tetrads': {
+    'c, e, g, bb is C7': function() {
+      assert.notEqual(names(['c', 'e', 'g', 'bb']).indexOf('C7'), -1);
+    },
+
+    'c, e, g, b is Cmaj7': function() {
+      assert.notEqual(names(['c', 'e', 'g', 'b']).indexOf('Cmaj7'), -1);
+    },
+
+    'a, c, e, g is Am7': function() {
+      assert.notEqual(names(['a', 'c', 'e', 'g']).indexOf('Am7'), -1);
+    },
+
+    'a, c, eb, g is Am7b5': function() {
+      assert.notEqual(names(['a', 'c', 'eb', 'g']).indexOf('Am7b5'), -1);
+    },
+
+    'f#, a#, c, e# is F#maj7b5': function() {
+      assert.notEqual(names(['f#', 'a#', 'c', 'e#']).indexOf('F#maj7b5'), -1);
+    },
+
+    'd, f, a, e is Dmadd9': function() {
+      assert.notEqual(names(['d', 'f', 'a', 'e']).indexOf('Dmadd9'), -1);
+    },
+
+    'eb, g, b, db is Eb7#5': function() {
+      assert.notEqual(names(['eb', 'g', 'b', 'db']).indexOf('Eb7#5'), -1);
+    },
+
+    'b, e, f#, a is B7sus4': function() {
+      assert.notEqual(names(['b', 'e', 'f#', 'a']).indexOf('B7sus4'), -1);
+    },
+
+    'e, g#, bb, d is E7b5': function() {
+      assert.notEqual(names(['e', 'g#', 'bb', 'd']).indexOf('E7b5'), -1);
+    }
   }
 }).export(module);

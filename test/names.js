@@ -89,6 +89,14 @@ vows.describe('più name inference').addBatch({
 
     'e, g#, bb, d is E7b5': function() {
       assert.notEqual(names(['e', 'g#', 'bb', 'd']).indexOf('E7b5'), -1);
+    },
+
+    'd, f, ab, cb is Ddim7': function() {
+      assert.notEqual(names(['d', 'f', 'ab', 'cb']).indexOf('Ddim7'), -1);
+    },
+
+    'c, eb, gb, bbb is Cdim7': function() {
+      assert.notEqual(names(['c', 'eb', 'gb', 'bbb']).indexOf('Cdim7'), -1);
     }
   }
 }).export(module);

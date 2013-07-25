@@ -39,8 +39,23 @@ Each `triad` object has two properties:
    - `'sus4'` for suspended fourth
    - All of above + `'#5'` or `'b5'` for fifth alterations
 
-### piu.infer(notes) -> Array of `chord`s
+### piu.infer(notes, enharmonics) -> Array of `chord`s
 This method returns an `array` of all the chords that the `notes` array constitutes.
+
+If *enharmonic* is `true`, all enharmonic chords will be returned as well.
+Otherwise the inferring defaults to "strict" chord inferring which will only
+return chords that consists of **exactly** those notes.
+
+```javascript
+// Default is strict inferring
+piu.infer(['d', 'f', 'ab', 'cb'].map(teoria.note)).map(piu.name);
+// -> [ 'Ddim7', 'Fm6b5' ]
+
+// Enable enharmonic inferring
+piu.infer(['d', 'f', 'ab', 'cb'].map(teoria.note), true).map(piu.name);
+// -> [ 'Ddim7', 'Fm6b5', 'Dm6b5', 'Bdim7', 'Bm6b5', 'G#dim7', 'G#m6b5', ... ]
+```
+
 Each `chord` object has three properties:
 
  - `root` - A string representation of the root note (octave-less)

@@ -3,8 +3,19 @@ var vows    = require('vows')
   , teoria  = require('teoria')
   , piu     = require('../index');
 
-function names(notes) {
-  return piu.infer(notes.map(teoria.note)).map(piu.name);
+function has(haystack, needles) {
+  var i = 0, n = needles.length;
+  haystack.forEach(function(hay) {
+    needles.forEach(function(needle) {
+      i = (hay === needle) ? i + 1 : i;
+    });
+  });
+
+  return i === n;
+}
+
+function names(notes, enharmonic) {
+  return piu.infer(notes.map(teoria.note), enharmonic).map(piu.name);
 }
 
 vows.describe('più name inference').addBatch({
@@ -107,6 +118,13 @@ vows.describe('più name inference').addBatch({
 
     'ab, c, eb, fb is Ab(b6)': function() {
       assert.notEqual(names(['ab', 'c', 'eb', 'fb']).indexOf('Ab(b6)'), -1);
+    }
+  },
+
+  'piu.infer() with enharmonic inferring enabled': {
+    'd, f, ab, cb is enharmonic equivalent to 4 dim7 chords': function() {
+      assert.equal(has(names(['d', 'f', 'ab', 'cb'], true),
+        ['Ddim7', 'Fdim7', 'Abdim7', 'Bdim7']), true);
     }
   }
 }).export(module);

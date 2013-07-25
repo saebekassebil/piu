@@ -39,12 +39,12 @@ Each `triad` object has two properties:
    - `'sus4'` for suspended fourth
    - All of above + `'#5'` or `'b5'` for fifth alterations
 
-### piu.infer(notes, enharmonics) -> Array of `chord`s
+### piu.infer(notes, enharmonic) -> Array of `chord`s
 This method returns an `array` of all the chords that the `notes` array constitutes.
 
 If *enharmonic* is `true`, all enharmonic chords will be returned as well.
 Otherwise the inferring defaults to "strict" chord inferring which will only
-return chords that consists of **exactly** those notes.
+return chords that consists of **exactly** the given notes.
 
 ```javascript
 // Default is strict inferring

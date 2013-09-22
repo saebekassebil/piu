@@ -19,6 +19,24 @@ function names(notes, enharmonic) {
 }
 
 vows.describe('più name inference').addBatch({
+  'piu.name() power-chords': {
+    'c, g is C5': function() {
+      assert.notEqual(names(['c', 'g']).indexOf('C5'), -1);
+    },
+
+    'd, a is D5': function() {
+      assert.notEqual(names(['d', 'a']).indexOf('D5'), -1);
+    },
+
+    'b, e is E5': function() {
+      assert.notEqual(names(['b', 'e']).indexOf('E5'), -1);
+    },
+
+    'F#4, B4 is B5': function() {
+      assert.notEqual(names(['F#4', 'B4']).indexOf('B5'), -1);
+    }
+  },
+
   'piu.name() triads': {
     'c, e, g is C': function() {
       assert.notEqual(names(['c', 'e', 'g']).indexOf('C'), -1);

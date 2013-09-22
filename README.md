@@ -3,24 +3,35 @@
 
 Let's infer some chord names from collections of notes, shall we?
 
+
 Install with npm:
 
     $ npm install piu
 
-Require like any other npm module:
-
-    var piu = require('piu');
-
 You'll most likely use this library with [teoria](https://github.com/saebekassebil/teoria)
 (as all the methods but `piu.name()` depends on objects from `teoria`),
-so let's require that too:
+so let's install that too:
 
-    var teoria = require('teoria');
+    $ npm install teoria
 
 And now, you're ready to infer triads, chord extensions and names!
 
-**DISCLAIMER**: This library is far from finished, and the `piu.name()` method
-will only recognize triads and tetrads (that is, chords consisting of 3 or 4 notes)
+```javascript
+// Infer the chords (strictly) constituted by the notes D, F, A, C
+piu
+  .infer( ['d', 'f', 'a', 'c'].map(teoria.note) )
+  .map( piu.name );
+// -> ['Dm7', 'F6']
+
+// Infer the chords (enharmonically) constituted by the notes B, D, F and Ab
+piu
+  .infer( ['b', 'd', 'f', 'ab'].map(teoria.note) )
+  .map( piu.name );
+// -> ['Dm6b5', 'Bdim7', 'Ddim7', 'Fm6b5' ... ]
+```
+
+**DISCLAIMER**: The `piu.name()` method will (for now) only recognize
+power-chords, triads and tetrads (that is, chords consisting of 2, 3 or 4 notes)
 
 ## API
 

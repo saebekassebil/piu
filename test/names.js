@@ -144,5 +144,11 @@ vows.describe('più name inference').addBatch({
       assert.equal(has(names(['d', 'f', 'ab', 'cb'], true),
         ['Ddim7', 'Fdim7', 'Abdim7', 'Bdim7']), true);
     }
+  },
+
+  'piu.infer ignore identical (octave-agnostic) notes': {
+    'd, f, a, D only infers *one* Dm': function() {
+      assert.equal(names(['d', 'f', 'a', 'D']).length, 1);
+    }
   }
 }).export(module);

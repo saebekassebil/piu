@@ -1,6 +1,6 @@
 {
   "name": "piu",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "description": "Infer/Recognize chords from collections of notes",
   "keywords": ["music", "jazz", "chords", "notes", "analytic"],
   "main": "index.js",
@@ -25,11 +25,7 @@
     "url": "https://raw.github.com/saebekassebil/piu/master/LICENSE"
   },
 
-  "peerDependencies": {
-    "teoria": ">=0.3.5"
-  },
-
   "devDependencies": {
-    "vows": ">=0.6.0"
+    "vows": "^0.6.0"
   }
 }

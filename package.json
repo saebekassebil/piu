@@ -1,31 +1,26 @@
 {
   "name": "piu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Infer/Recognize chords from collections of notes",
   "keywords": ["music", "jazz", "chords", "notes", "analytic"],
   "main": "index.js",
-
+  "scripts": {
+    "test": "tape test/*"
+  },
   "author": {
     "name": "Jakob Miland <saebekassebil>",
     "email": "saebekassebil@gmail.com",
     "url": "https://github.com/saebekassebil"
   },
-
-  "scripts": {
-    "test": "vows test/*"
-  },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/saebekassebil/piu"
   },
-
   "license": {
     "type": "MIT",
     "url": "https://raw.github.com/saebekassebil/piu/master/LICENSE"
   },
-
   "devDependencies": {
-    "vows": "^0.6.0"
+    "tape": "^2.13.3"
   }
 }
